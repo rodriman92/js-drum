@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drums Kit</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <h1 class="h1">DRUM KIT </h1>
-    <h2 class="h2">Click or press the keyboard to play the sounds of the drum</h2>
+    <h1 class="h1 animate__animated animate__flash animate__repeat-1" id="h1" >DRUMS KIT </h1>
+    <h2 class="h2" id="h2">Click or press the keyboard to play the sounds of the drum</h2>
     <div class="keys">
         <div data-key="65" class="key">
             <kbd>A</kbd>
@@ -64,6 +65,12 @@
     <audio data-key="74" src="./media/sounds/snare.wav"></audio>
     <audio data-key="75" src="./media/sounds/tom.wav"></audio>
 
+    <footer class="footer">
+        <div class="content">
+            <h4 class="h4">By <a href="https:\\github.com\rodriman92" target="_blank" rel="noopener noreferrer">rodriman92 🚀</a></h4>
+        </div>
+    </footer>
+
     <script>
         window.addEventListener('keydown', (e) => {
             let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
@@ -91,4 +98,5 @@
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>

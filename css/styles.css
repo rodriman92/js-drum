@@ -1,19 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@media only screen and (max-width: 600px) {
+  body #h1 {
+    font-size: 8rem; }
+  body #h2 {
+    font-size: 3rem; }
+  body .keys {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 3rem; }
+    body .keys .key {
+      width: 80%;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 2rem; }
+  body .footer .content .h4 {
+    font-size: 1.2rem; } }
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  body #h1 {
+    font-size: 8rem; }
+  body #h2 {
+    font-size: 3rem; }
+  body .keys {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 3rem; }
+    body .keys .key {
+      width: 80%;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 2rem; }
+  body .footer .content .h4 {
+    font-size: 1.2rem; } }
+
 body {
-  background-image: url(https://unsplash.com/photos/QdmUva6qBTk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8ZHJ1bXxlbnwwfDB8fHwxNjQ5Njk0MjAw&force=true);
+  background: #121212;
   background-size: cover;
-  font-family: 'Bebas Neue', cursive; }
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 6rem; }
   body .playing {
     box-shadow: 0px 15px 20px #F200E4, 0px 15px 40px #F200E4;
     transform: scale(1.1); }
   body .h1 {
-    font-size: 6rem;
+    font-size: 10rem;
     color: #00FFE7;
     display: flex;
     justify-content: center;
     text-align: center; }
   body .h2 {
-    font-size: 2rem;
+    font-size: 4rem;
     color: #F200E4;
     display: flex;
     justify-content: center;
@@ -30,7 +69,8 @@ body {
       max-height: 200vh;
       transition: all 0.07s;
       width: 8rem;
-      height: 8rem; }
+      height: 8rem;
+      background-color: #00FFE7; }
       body .keys div kbd {
         font-size: 4rem;
         font-weight: 800;
@@ -41,4 +81,22 @@ body {
         display: flex;
         flex-direction: column;
         color: white;
-        background-color: #F200E4; }
+        background-color: #F200E4;
+        bottom: 0; }
+  body .footer .content {
+    display: flex;
+    background-color: #121212;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    height: auto; }
+    body .footer .content .h4 {
+      letter-spacing: 0.1rem;
+      font-size: 1.2rem;
+      color: white; }
+      body .footer .content .h4 a {
+        text-decoration: none;
+        color: #00FFE7; }
