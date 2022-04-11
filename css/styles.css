@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+body {
+  background-image: url(https://unsplash.com/photos/QdmUva6qBTk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8ZHJ1bXxlbnwwfDB8fHwxNjQ5Njk0MjAw&force=true);
+  background-size: cover;
+  font-family: 'Bebas Neue', cursive; }
+  body .playing {
+    box-shadow: 0px 15px 20px #F200E4, 0px 15px 40px #F200E4;
+    transform: scale(1.1); }
+  body .h1 {
+    font-size: 6rem;
+    color: #00FFE7;
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+  body .h2 {
+    font-size: 2rem;
+    color: #F200E4;
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+  body .keys {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 6rem; }
+    body .keys div {
+      margin: 1rem;
+      border: 4px solid #00FFE7;
+      max-height: 200vh;
+      transition: all 0.07s;
+      width: 8rem;
+      height: 8rem; }
+      body .keys div kbd {
+        font-size: 4rem;
+        font-weight: 800;
+        color: #F200E4; }
+      body .keys div .sound {
+        font-size: 1.5rem;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background-color: #F200E4; }

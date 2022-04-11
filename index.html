@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drums Kit</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1 class="h1">DRUM KIT </h1>
+    <h2 class="h2">Click or press the keyboard to play the sounds of the drum</h2>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">Clap</span>
+        </div>
+
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">Hihat</span>
+        </div>
+
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">Kick</span>
+        </div>
+
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">Kick vinyl</span>
+        </div>
+
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">Openhat</span>
+        </div>
+
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">Ride</span>
+        </div>
+
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">Snare</span>
+        </div>
+
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">Tom</span>
+        </div>
+    </div>
+
+
+    <!-- Audio files-->
+
+    <audio data-key="65" src="./media/sounds/clap.wav"></audio>
+    <audio data-key="83" src="./media/sounds/hihat.wav"></audio>
+    <audio data-key="68" src="./media/sounds/kick.wav"></audio>
+    <audio data-key="70" src="./media/sounds/kick-vinyl.wav"></audio>
+    <audio data-key="71" src="./media/sounds/openhat.wav"></audio>
+    <audio data-key="72" src="./media/sounds/ride.wav"></audio>
+    <audio data-key="74" src="./media/sounds/snare.wav"></audio>
+    <audio data-key="75" src="./media/sounds/tom.wav"></audio>
+
+    <script>
+        window.addEventListener('keydown', (e) => {
+            let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+            let key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            if(audio){
+                audio.play();
+                audio.currentTime=0;
+                key.classList.add("playing");
+            }
+            
+        })
+
+        let key2 = document.querySelectorAll(".key")
+        key2.forEach((e) => {
+            e.addEventListener('transitionend', remove)
+        })
+        
+        function remove(k){
+            if (k.propertyName = "transform") {
+                this.classList.remove("playing");
+            }
+            return
+        }
+    </script>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
